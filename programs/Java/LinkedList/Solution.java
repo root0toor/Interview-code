@@ -1,6 +1,6 @@
 package LinkedList;
 
-public class Main {
+public class Solution {
     public <T extends Comparable<T>> ListNode<T> mergeTwoLists(ListNode<T> node1, ListNode<T> node2) {
         ListNode<T> loutput = new ListNode<>();
         ListNode<T> tail = loutput;
@@ -35,7 +35,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main main = new Main();
+        Solution solution = new Solution();
 
         LinkedList<Integer> l1 = new LinkedList<>();
         l1.add(1);
@@ -49,7 +49,7 @@ public class Main {
         l2.add(4);
         l2.displayLinkedList();
 
-        ListNode<Integer> temp = main.mergeTwoLists(l1.head, l2.head);
+        ListNode<Integer> temp = solution.mergeTwoLists(l1.head, l2.head);
     }
 }
 

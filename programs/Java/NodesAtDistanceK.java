@@ -6,8 +6,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 
-import Tree.TreeNode;
-
 class TreeNode {
     int val;
     TreeNode left;

@@ -38,8 +38,8 @@ class Person {
 
 public class Solution {
     public static void main(String[] args) {
-        Person p1 = new Person("nithin", 20);
-        Person p2 = new Person("pinku", 20);
+        // Person p1 = new Person("nithin", 20);
+        // Person p2 = new Person("pinku", 20);
         // Person p3 = new Person("pinku", 20);
     }
 }

@@ -3,10 +3,7 @@ import java.util.Map;
 
 class LRUCache<K, V> {
     private LinkedHashMap<K, V> cache;
-    private int capacity;
-
     public LRUCache(int capacity) {
-        this.capacity = capacity;
         this.cache = new LinkedHashMap<>(capacity, 0.75f, true) {
             protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
                 return size() > capacity;

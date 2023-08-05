@@ -31,14 +31,6 @@ public class Algos {
         System.out.println(selectRandomColor() + outputString + reset);
     }
 
-    private void printForInfo(String outputString){
-        System.out.println(this.colors[1] + outputString + reset);
-    }
-
-    private void printInRed(String outputString){
-        System.out.println(this.colors[0] + outputString + reset);
-    }
-
     public boolean isAnagram(String s1, String s2) {
         String formattedString = String.format("  ====  S1 length %d and S2 length %d  ====  ", s1.length(), s2.length());
         printForDebug(formattedString);
@@ -126,16 +118,7 @@ public class Algos {
 
 
     public static void main(String[] args) {
-        // int[] array = new int[] {2, 1};
-        Algos algos = new Algos();
-        // int output = algos.rob(array);
-        // algos.printInRed("    ===     Max Robbed amount is    ===     " + output);
-        // int[] output = algos.twoSum(array, 9);
-        // algos.printForInfo("TwoIndexses are " + output[0] + ", "+ output[1]);
-        // String s1 = "anagarm";
-        // String s2 = "nagaramngv";
-        // boolean isAnagram = algos.isAnagram(s1, s2);
-        // algos.printForInfo("The Anagram Stands to " + isAnagram);
+        new Algos();
     
         // CacheManager cacheManager = CacheManager.getInstance();
         // cacheManager.deserializeCache();

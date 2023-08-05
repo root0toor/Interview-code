@@ -70,8 +70,17 @@ public class CacheManager {
             if (cacheFile.exists()) {
                 FileInputStream fileInputStream = new FileInputStream(cacheFilePath);
                 ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-                cache = (HashMap<Integer, String>) objectInputStream.readObject();
-                colorsCache = (HashMap<String, String[]>) objectInputStream.readObject();
+    
+                // Use proper type checking for the deserialized objects
+                @SuppressWarnings("unchecked")
+                HashMap<Integer, String> objCache = (HashMap<Integer, String>) objectInputStream.readObject();
+                @SuppressWarnings("unchecked")
+                HashMap<String, String[]> objColorsCache = (HashMap<String, String[]>) objectInputStream.readObject();
+    
+                // Assign the deserialized objects directly to cache and colorsCache
+                cache = objCache;
+                colorsCache = objColorsCache;
+    
                 objectInputStream.close();
                 fileInputStream.close();
                 System.out.println("Cache deserialized successfully.");
@@ -82,6 +91,8 @@ public class CacheManager {
             System.out.println("Error deserializing cache: " + e.getMessage());
         }
     }
+    
+    
 
     public void printCache() {
         System.out.println("Cache contents:");

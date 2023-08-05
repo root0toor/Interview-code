@@ -35,7 +35,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        // Solution solution = new Solution();
 
         LinkedList<Integer> l1 = new LinkedList<>();
         l1.add(1);
@@ -49,7 +49,7 @@ public class Solution {
         l2.add(4);
         l2.displayLinkedList();
 
-        ListNode<Integer> temp = solution.mergeTwoLists(l1.head, l2.head);
+        // ListNode<Integer> temp = solution.mergeTwoLists(l1.head, l2.head);
     }
 }
 

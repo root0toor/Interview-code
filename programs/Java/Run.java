@@ -45,7 +45,6 @@ class ElectricCar extends Vehicle {
 // GasolineCar class is derived from the FuelCar class, which is further derived from the Vehicle class
 // Derived class (Grandchild)
 class GasolineCar extends FuelCar {
-    private String combustType;
     private String gasCapacity;
     GasolineCar(String name, String model, String combustType, String gasCapacity) {
         super(name, model, combustType);
